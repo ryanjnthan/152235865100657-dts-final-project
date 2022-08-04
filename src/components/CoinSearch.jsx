@@ -34,13 +34,13 @@ const CoinSearch = ({ coins }) => {
         </thead>
         <tbody>
           {coins
-            ?.filter((value) => {
+            .filter((value) => {
               if (searchText === "") {
                 return value;
               } else if (
                 value.name.toLowerCase().includes(searchText.toLowerCase())
               ) {
-                return value;
+                return false;
               }
             })
             .map((coin) => (
