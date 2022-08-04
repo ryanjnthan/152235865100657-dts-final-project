@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineMail, AiFillLock } from "react-icons/ai";
-import { signIn, UserAuth } from "../context/AuthContext";
+import { UserAuth } from "../context/AuthContext";
 
 const Signin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [setError] = useState("");
   const navigate = useNavigate();
   const { signIn } = UserAuth();
 
